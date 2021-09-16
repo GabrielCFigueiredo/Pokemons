@@ -1,4 +1,4 @@
-import { makeStyles, Typography } from '@material-ui/core'
+
 import Pagination from '../../components/Pagination/Pagination'
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'

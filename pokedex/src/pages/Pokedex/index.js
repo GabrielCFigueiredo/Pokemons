@@ -5,9 +5,6 @@ import Pokemon from '../../components/pokemon';
 import { homeList } from '../../Router/coordinator';
 
 
-
-
-
  export function Pokedex (props) {
 
     const history = useHistory()
