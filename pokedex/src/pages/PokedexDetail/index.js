@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 
 
 export function PokedexDetail({ poke }) {
-    console.log('props', poke);
+
     const { name } = useParams()
     const [pokemonDetail, setPokemonDetail] = useState()
     const classes = useStyles();
