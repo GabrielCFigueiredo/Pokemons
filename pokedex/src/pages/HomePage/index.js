@@ -40,7 +40,6 @@ flex-wrap: wrap;
             
         })
         .catch((error) => {
-            console.log(error.response);
         })
     }
     useEffect(() => {
