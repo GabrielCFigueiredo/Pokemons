@@ -1,8 +1,7 @@
-import { AppBar, Box, Button, Card, Container, CssBaseline, makeStyles, Typography } from '@material-ui/core';
+import { AppBar, Box, Button, makeStyles, Typography } from '@material-ui/core';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom';
-
 import Progress from '../../components/ProgressBar/ProgressBar';
 import { homeList } from '../../Router/coordinator';
 
@@ -35,11 +34,9 @@ export function PokedexDetail({ poke }) {
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
             .then((response) => {
-                console.log(response.data);
                 setPokemonDetail(response.data)
             })
             .catch((error) => {
-                console.log(error.response);
 
             })
     }, [])

@@ -19,9 +19,9 @@ import { homeList } from '../../Router/coordinator';
             <AppBar position="static">
             <Box display="flex" p={1}>
             <Box p={4} >
-                    <Button onClick={() => homeList(history)} variant="contained" color="secondary">Voltar</Button>
+                    <Button onClick={() => homeList(history)} variant="contained" color="secondary">Voltar para Lista de Pokemons</Button>
                 </Box>
-                <Box style={{marginLeft: 600}} mx="auto" bgcolor='#f44336' p={1}>
+                <Box style={{marginLeft: 400}} mx="auto" bgcolor='#f44336' p={1}>
                     <Typography variant="h6">
                         <img src="https://fontmeme.com/permalink/210916/27686ba43608c9b4fa91ca090954cdce.png" ></img>
                     </Typography>
