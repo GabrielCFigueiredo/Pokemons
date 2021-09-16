@@ -2,7 +2,7 @@ import { AppBar, Box, Button, Card, Container, CssBaseline, makeStyles, Typograp
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom';
-import Header from '../../components/Header';
+
 import Progress from '../../components/ProgressBar/ProgressBar';
 import { homeList } from '../../Router/coordinator';
 
@@ -43,7 +43,6 @@ export function PokedexDetail({ poke }) {
 
             })
     }, [])
-    console.log('teste', poke);
     return (
         <div>
             <div>
