@@ -34,11 +34,9 @@ export function PokedexDetail({ poke }) {
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
             .then((response) => {
-                console.log(response.data);
                 setPokemonDetail(response.data)
             })
             .catch((error) => {
-                console.log(error.response);
 
             })
     }, [])
