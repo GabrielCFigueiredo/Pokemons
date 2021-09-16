@@ -1,18 +1,27 @@
-import React from 'react'
-import styled from 'styled-components';
+import { AppBar, Box, Button, Typography } from '@material-ui/core';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { listPokedex } from '../../Router/coordinator';
 
-const ContainerTitulo = styled.div ` 
-display: flex;
-justify-content: center;
-background-color: #FF4040;
-`
 
- export function Header () {
+function Header() {
 
-    return(
-        <ContainerTitulo>
-            <img src= "https://fontmeme.com/permalink/210711/9b0c1bc177818f22c277288ff4011176.png" ></img>
-        </ContainerTitulo>
+    const history = useHistory()
+
+    return (
+        <AppBar position="static">
+            <Box display="flex" p={1}>
+                <Box style={{marginRight: 400}} mx="auto" bgcolor='#f44336' p={1}>
+                    <Typography variant="h6">
+                        <img src="https://fontmeme.com/permalink/210916/186f75624a5afa950e1db233b7e38c0e.png" ></img>
+                    </Typography>
+                </Box>
+                <Box p={4} >
+                    <Button onClick={() => listPokedex(history)} variant="contained" color="secondary">Ir para Pokedex</Button>
+                </Box>
+            </Box>
+        </AppBar>
+
     )
 }
 export default Header;

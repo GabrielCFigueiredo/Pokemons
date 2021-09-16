@@ -5,8 +5,9 @@ import Pokedex from "../pages/Pokedex/index"
 import PokedexDetail from "../pages/PokedexDetail/index"
  export function Router() {
 
-    const [pokemon, setPokemon] = useState([{ }])
+    const [pokemon, setPokemon] = useState([])
     const [pokedex, setPokedex] = useState([])
+    const [poke, setPoke] = useState([])
     
     return(
         <div>
@@ -18,6 +19,9 @@ import PokedexDetail from "../pages/PokedexDetail/index"
                    setPokemon={setPokemon}
                    pokedex={pokedex}
                    setPokedex={setPokedex}
+                   poke={poke}
+                   setPoke={setPoke}
+                   
                    />
                </Route>
                <Route exact path={"/pokedex"}>
@@ -26,10 +30,20 @@ import PokedexDetail from "../pages/PokedexDetail/index"
                    setPokemon={setPokemon}
                    pokedex={pokedex}
                    setPokedex={setPokedex}
+                   poke={poke}
+                   setPoke={setPoke}
+                   
                    />
                </Route>
-               <Route exact path={"/detail/:id"}>
-                   <PokedexDetail/>
+               <Route exact path={"/pokemon/:name/"}>
+                   <PokedexDetail
+                   pokemon={pokemon}
+                   setPokemon={setPokemon}
+                   pokedex={pokedex}
+                   setPokedex={setPokedex}
+                   poke={poke}
+                   setPoke={setPoke}
+                   />
                </Route>
            </Switch>
            </BrowserRouter>
